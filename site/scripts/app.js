@@ -5,5 +5,10 @@ modulo1.controller("mainCtrl",[
 	'$scope',
 	function($scope){
 		$scope.test = "Hola Angular";
-		$scope.posts= ["post1 Hola","post2","post3","post4","post5"];
+		$scope.posts = [{title: "Post 1", upvotes: 5},
+		{title: "Post 2", upvotes: 15},
+		{title: "Post 3", upvotes: 20},
+		{title: "Post 4", upvotes: 25},
+		{title: "Post 5", upvotes: 35},
+		{title: "Post 6", upvotes: 45}];
 	}]);
