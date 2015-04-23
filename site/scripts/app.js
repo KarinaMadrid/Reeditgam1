@@ -1,4 +1,4 @@
-console.log("#IvanR: Cargo app.js");
+console.log("#KaryM: Cargo app.js");
 var modulo1 = 
 	angular.module("reeditgam",[]);
 modulo1.controller("mainCtrl",[
@@ -11,9 +11,19 @@ modulo1.controller("mainCtrl",[
 		{title: "Post 4", upvotes: 25},
 		{title: "Post 5", upvotes: 35},
 		{title: "Post 6", upvotes: 45}];
+
 		//METODO DEL CONTROLADOR
 		$scope.addPost = function() {
+			if(!$scope.title || $scope.title === "")
+			{
+				alert("NO se permite postear titulos vacios")
+				return;
+			}
 			$scope.posts.push(
-				{title:"New Post", upvotes:0});
+				{title: $scope.title, 
+				upvotes: 0});
+			//twp.way data binding
+			$scope.title="";
+
 		};
 	}]);
