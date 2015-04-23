@@ -20,10 +20,17 @@ modulo1.controller("mainCtrl",[
 				return;
 			}
 			$scope.posts.push(
-				{title: $scope.title, 
+				{
+					title: $scope.title, 
+					link:  $scope.link,
 				upvotes: 0});
 			//twp.way data binding
 			$scope.title="";
+			$scope.link="";
 
+		};
+		// metodo que incrementa el voto de un post en una unidad
+		$scope.incrementUpvotes=function(post){
+			post.upvotes +=1;
 		};
 	}]);
