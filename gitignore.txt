@@ -1,0 +1,3 @@
+#Ignorar estos elementos
+#ESTO ES UN COMENTARIO
+site/bower_components
