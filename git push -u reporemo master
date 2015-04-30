@@ -1,0 +1,41 @@
+[33mcommit 93461f7057177459a5637979c4a0159222dfb547[m
+Author: KarinaMadrid <karymadrid56@gmail.com>
+Date:   Thu Apr 30 18:29:41 2015 -0500
+
+    07:Agregando gitignore
+
+[33mcommit 4fb6641cbd58a81a6e3197258000f3474bb869d7[m
+Author: KarinaMadrid <karymadrid56@gmail.com>
+Date:   Thu Apr 23 12:37:35 2015 -0500
+
+    06.Se agrega funcionalidad de compartir links y se carga bootstrap
+
+[33mcommit 2ba95f4ab04da9e0cc7e508ac87130df15877f77[m
+Author: KarinaMadrid <karymadrid56@gmail.com>
+Date:   Thu Apr 23 11:47:13 2015 -0500
+
+    05. Se habilita la funcion de Post de forma automatica
+
+[33mcommit f3409de00d544cc0c31db9010e3d3ad59a16b412[m
+Author: KarinaMadrid <karymadrid56@gmail.com>
+Date:   Tue Apr 21 18:34:42 2015 -0500
+
+    04.Agregando nuevos Post Staticos
+
+[33mcommit 76f0627546661505836684c2f6bbc6935835cb41[m
+Author: KarinaMadrid <karymadrid56@gmail.com>
+Date:   Tue Apr 21 18:30:19 2015 -0500
+
+    03.Post con Objetos
+
+[33mcommit 4ae440740f9593c2887fb0786d6172c69ab9d681[m
+Author: KarinaMadrid <karymadrid56@gmail.com>
+Date:   Tue Apr 21 18:22:16 2015 -0500
+
+    02.Post con ng-repeat
+
+[33mcommit a637a7d5ba1b45ad42b1a18eb9df8a5c268e1e58[m
+Author: KarinaMadrid <karymadrid56@gmail.com>
+Date:   Tue Apr 21 17:37:17 2015 -0500
+
+    01. Hola Mundo Angular
