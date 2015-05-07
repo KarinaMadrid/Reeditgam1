@@ -1,16 +1,40 @@
 console.log("#KaryM: Cargo app.js");
 var modulo1 = 
 	angular.module("reeditgam",[]);
+	// CREANDO UN SERVICIO DEL TIPO FACTORY
+    modulo1.factory('posts',[function(){
+    	//CUERPO DEL FACTORY LLAMADO POST
+    	var o={
+    		posts : [
+    		{title: "post 1", upvotes: 15,
+    		comments: [
+                  {author: "Karina", body:"Esto esta geneal.", upvotes:3},
+                  {author: "Gamaliel", body:"Esto es basura.",upvotes:0}]
+    		    },
+    		    {title: "post 2", upvotes: 25,
+    		comments: [
+                  {author: "Coco", body:"Esto es bonito.", upvotes:5},
+                  {author: "Cristian", body:"Esto es aburrido.",upvotes:1}]
+    		    },
+    		    {title: "post 3", upvotes: 35,
+    		comments: [
+                  {author: "Angel", body:"Esto esta padrisimo.", upvotes:4},
+                  {author: "Daniel", body:"Esto no me gusta.",upvotes:3}]
+    		    }
+    		]
+    	};
+    	//RETORNANDO OBJETO DE DATOS PERSISTENTES.
+    	return o;
+    }]);
+
+	//CREANDO CONTROLADOR
+	//DEPENDENCY INJECTION
 modulo1.controller("mainCtrl",[
-	'$scope',
-	function($scope){
+	'$scope','posts', //INYECTANDO FACTORY POST
+	function($scope,posts){
 		$scope.test = "Hola Angular";
-		$scope.posts = [{title: "Post 1", upvotes: 5},
-		{title: "Post 2", upvotes: 15},
-		{title: "Post 3", upvotes: 20},
-		{title: "Post 4", upvotes: 25},
-		{title: "Post 5", upvotes: 35},
-		{title: "Post 6", upvotes: 45}];
+		//MODELO AL CUAL SE LE ASIGNA EL RESULTADO DEL FACTORY
+		$scope.posts = posts.posts;
 
 		//METODO DEL CONTROLADOR
 		$scope.addPost = function() {
