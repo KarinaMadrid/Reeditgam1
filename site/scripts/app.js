@@ -1,6 +1,22 @@
 console.log("#KaryM: Cargo app.js");
 var modulo1 = 
-	angular.module("reeditgam",[]);
+	angular.module("reeditgam",['ui.router']);  // INYECTANDO EL MODULO DEL UI.ROUTER COMO PARAMETRO DEL ARREGLO DE OBJETOS DEL MODULO.
+	// CONFIGURANDO LAS RUTAS.
+	// RECIVE UN ARREGLO DE ELEMENTOS.
+	modulo1.config(['$stateProvider',
+		'$urlRouterProvider',
+		function($stateProvider,$urlRouterProvider){
+			//INICIANDO RUTINA DE CONFIGURACION.
+			$stateProvider.state('home',{
+				//DEFINIENDO ESTADO COMO UN OBJETO .
+				url:"/home",// URL QUE DEFINE EL ESTADO.
+				//PLANTILLA BASE PARA EL ESTADO.
+				templateUrl: "/home.html",
+				controller:'mainCtrl'
+			});
+			// URL POR DEFECTO 
+			$urlRouterProvider.otherwise('home');
+		}]);
 	// CREANDO UN SERVICIO DEL TIPO FACTORY
     modulo1.factory('posts',[function(){
     	//CUERPO DEL FACTORY LLAMADO POST

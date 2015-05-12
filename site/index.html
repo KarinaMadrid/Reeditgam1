@@ -13,7 +13,15 @@
 	ng-controller="mainCtrl">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
-			<div class="page-header">
+			<ui-view> </ui-view> <!-- Es el encargado de reenderizar plantillas-->
+			
+		</div>
+	</div>
+	<!-- CREANDO PLANTILLAS -->
+	<!-- PLANTILLA /HOME.HTML-->
+	<script type="text/ng-template"
+	id="/home.html">
+	<div class="page-header">
 				<h1>Reeditgam!!!</h1>
 			</div>	
 			<!-- Creando el formulario -->
@@ -55,9 +63,7 @@
 					</span>
 				</span>
 			</div>		
-		</div>
-	</div>
-	
+	</script>
 	<!-- Cargando Librerias -->
 	<!-- Es buena practica al final -->
 	<!-- cargar los scrips -->
@@ -73,6 +79,11 @@
 	<script 
 		type="text/javascript"
 		src="./vendor/angular/angular.js">
+		</script>
+		<!-- Cargando angular-ui-router-->
+		<script 
+		type="text/javascript"
+		src="./vendor/angular-ui-router/release/angular-ui-router.js"> 
 		</script>
 	<!-- Cargando app.js -->
 	<script
