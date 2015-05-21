@@ -109,7 +109,11 @@ modulo1.controller("postsCtrl",[
 		$scope.post = posts.posts[$stateParams.id];
         // OBTENIENDO EL PARAMETRO  ID DE LOS PARAMETROS
         // DEL ESTADO DE LA RUTA Y PASANDOLO COMO
-        // ARGUMENTOS AL OBJETO DEL FACTORY   
+        // ARGUMENTOS AL OBJETO DEL FACTORY  
+        // metodo que incrementa el voto de un post en una unidad
+		$scope.incrementUpvotes=function(post){
+			post.upvotes +=1;
+		}; 
 	}]);
 
 

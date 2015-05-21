@@ -91,14 +91,26 @@
 
      	</h3>
      </div>
+       <!-- AGREGAMOS POST A LOS COMENTARIOS-->
      <div
        ng-repeat="comment in post.comments | orderBy:'-upvotes'">
-       <span class="glyphicon glyphicon-thumbs-up">
-       
-      </span>
+       <span class="glyphicon glyphicon-thumbs-up"
+       ng-click="incrementUpvotes(comment)"></span>
+				{{comment.upvotes}}
+				<span style="font-size:20px; margin-left:10px">
+					<!-- Agregando los links -->
+					<a ng-show="comment.link" href="{{comment.link}}">
+						{{post.title}}	
+					</a>
+					<span ng-hide="comment.link">
+						{{post.title}}
+					</span>
+				</span>
+      
      {{comment.upvotes}}- por {{comment.author}}
       <span style="font-size:20px; margin-left:10px;">
-      	{{comment.body}}
+      {{comment.body}}
+			
       </span>
      </div>
    </script>
